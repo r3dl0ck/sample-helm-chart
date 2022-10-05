@@ -2,7 +2,7 @@
 kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
-  name: sample-app-test
+  name: sample-app
 spec:
   successfulBuildsHistoryLimit: 5
   failedBuildsHistoryLimit: 5
