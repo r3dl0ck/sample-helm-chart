@@ -2,8 +2,7 @@
 kind: BuildConfig
 apiVersion: build.openshift.io/v1
 metadata:
-  name: example-1
-  namespace: jenkins
+  name: sample-app-test
 spec:
   successfulBuildsHistoryLimit: 5
   failedBuildsHistoryLimit: 5
