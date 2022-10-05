@@ -38,6 +38,7 @@ oc new-project uat
 ```
 
 6. Grant `edit` role to Jenkins service account:
+```
 oc policy add-role-to-user edit system:serviceaccount:jenkins:default -n dev
 oc policy add-role-to-user edit system:serviceaccount:jenkins:default -n uat
 ```
