@@ -14,8 +14,6 @@ pipeline{
                         steps {
                             script{
 					openshift.withCluster(){
-                                        sh "sleep 60"
-                                        sh "ls -la /usr/bin/helm"
                                         sh "/usr/bin/helm upgrade --install helm-app shailendra/sample-app --values dev/values.yaml -n dev --wait"
                                     }
                                 }
