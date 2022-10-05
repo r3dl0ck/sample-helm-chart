@@ -22,7 +22,7 @@ pipeline {
       }
     }
   
-    state("Test Dev") {
+    stage("Test Dev") {
       steps {
         script {
           sh "sleep 10"
@@ -36,6 +36,14 @@ pipeline {
           openshift.withCluster(){
             sh "/usr/bin/helm upgrade --install helm-app shailendra/sample-app --values uat/values.yaml -n uat --wait"
           }
+        }
+      }
+    }
+
+    stage("Test UAT") {
+      steps {
+        script {
+          sh "sleep 10"
         }
       }
     }
